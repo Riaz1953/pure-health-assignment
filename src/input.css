@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour+Convergence&display=swap");
+@theme {
+  --font-sans: "Poppins", sans-serif;
+  --color-primary: #155dfc;
+  --color-secondary: #0d9488;
+  --color-dark: #333333;
+  --color-dark-light: #7a7a7a;
+  --background-image-vector: url("./images/vector.png");
+  --background-image-shape_2: url("./images/shape_2.png");
+  --background-image-492141: url("./images/492141.png");
+}
+@layer components {
+  .btn {
+    padding: 10px 15px;
+    border-radius: 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 1rem;
+  }
+}

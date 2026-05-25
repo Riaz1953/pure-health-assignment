@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header-top bg-primary text-white hidden md:block p-3">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center max-w-285 mx-auto py-4"
+      >
+        <div class="flex flex-col md:flex-row gap-2 text-sm">
+          <a href=""><i class="fa-solid fa-phone"></i> +1 (123) 456-7890</a>
+          <a href=""
+            ><i class="fa-regular fa-envelope"></i> +hello@medicare.com</a
+          >
+        </div>
+        <div class="flex gap-2 justify-center items-center">
+          <small text-sm>Follow Us:</small>
+          <div class="flex md:flex-row gap-2">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <p class="w-0.5 h-3 bg-white hidden md:block"></p>
+          <i class="fa-solid fa-earth-africa"></i>
+          <small class="text-sm">EN</small>
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Start -->
+    <nav class="bg-white shadow-md sticky top-0 left-0 right-0 z-10">
+      <div class="max-w-285 mx-auto flex justify-between items-center p-3">
+        <a href="#">
+          <img src="/src/images/logo.png" alt="" class="h-10" />
+        </a>
+        <!-- desktop Menu -->
+        <div
+          id="nav-menu"
+          class="gap-6 md:flex lg:gap-12 hidden p-3 items-center"
+        >
+          <a href="#" class="font-medium hover:text-primary"
+            >Home <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a href="#" class="font-medium hover:text-primary"
+            >Shop <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a href="#" class="font-medium hover:text-primary"
+            >Page <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a href="#" class="font-medium hover:text-primary"
+            >Blog <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a href="#" class="font-medium hover:text-primary"
+            >Contact <i class="fa-solid fa-angle-down"></i
+          ></a>
+          <a
+            href="#"
+            class="font-medium text-white bg-primary py-3 px-3 rounded-4xl hover:bg-transparent hover:border-primary hover:border hover:text-primary duration-700"
+            >Appointment <i class="fa-solid fa-angle-right"></i
+          ></a>
+        </div>
+
+        <button class="text-gray-400 p-2 md:hidden" onclick="handleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- Mobile Menu Navbar -->
+        <div
+          id="nav-dialog"
+          class="fixed inset-0 bg-white/70 backdrop-blur-3xl z-10 hidden"
+        >
+          <div id="nav-bar" class="flex justify-between p-3 shadow-2xl">
+            <a href="#">
+              <img src="/src/images/logo.png" alt="" class="h-10" />
+            </a>
+            <button
+              class="text-gray-400 p-2 block md:hidden"
+              onclick="handleMenu()"
+            >
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <!-- Mobile menu Start -->
+          <div class="p-3 flex flex-col gap-4">
+            <a
+              href="#"
+              class="font-medium p-3 duration-700 hover:bg-gray-400 rounded-lg"
+              >Home <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a
+              href="#"
+              class="font-medium p-3 duration-700 hover:bg-gray-400 rounded-lg"
+              >Shop <i class="fa-solid fa-angle-right"></i
+            ></a>
+            <a
+              href="#"
+              class="font-medium p-3 duration-700 hover:bg-gray-400 rounded-lg"
+              >Page <i class="fa-solid fa-angle-right"></i
+            ></a>
+            <a
+              href="#"
+              class="font-medium p-3 duration-700 hover:bg-gray-400 rounded-lg"
+              >Blog <i class="fa-solid fa-angle-right"></i
+            ></a>
+            <a
+              href="#"
+              class="font-medium p-3 duration-700 hover:bg-gray-400 rounded-lg"
+              >Contact <i class="fa-solid fa-angle-right"></i
+            ></a>
+            <a
+              href="#"
+              class="font-medium text-white bg-primary py-3 px-3 rounded-4xl self-start hover:bg-transparent hover:border hover:text-primary duration-700"
+              >Appointment <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+          <!-- Mobile menu End -->
+        </div>
+      </div>
+    </nav>
+    <!-- Main -->
+    <main class="min-h-screen">
+      <section
+        class="hero-section bg-linear-to-r from-[#0B819D45] to-[#155DFC33]"
+      >
+        <div
+          class="flex flex-col-reverse md:flex-row max-w-285 mx-auto justify-center items-center px-3 md:px-0"
+        >
+          <div class="hero-left-section flex flex-col space-y-5 py-10">
+            <small
+              class="bg-secondary rounded-lg p-1 text-white w-fit animate-bounce"
+              >Health comes first
+            </small>
+            <h1
+              class="font-bold text-5xl bg-shape_2 bg-no-repeat bg-[right_50%] md:text-7xl"
+            >
+              Smart Health <br />
+              <span id="text" class="text-primary min-h-7 inline-block"></span>
+            </h1>
+            <p class="text-sm">
+              Book virtual consultations with top specialists in minutes. We put
+              your health first. Book your appointment now
+            </p>
+            <div
+              class="flex flex-col justify-center items-center md:space-x-3.5 md:justify-start md:items-center md:flex-row space-y-3.5"
+            >
+              <button
+                class="btn hover:bg-white hover:text-primary hover:border-primary hover:border transition-all duration-700"
+              >
+                <i class="fa-regular fa-user"></i> Find a Doctor
+              </button>
+              <button
+                class="text-primary rounded-3xl bg-white p-[10px_15px] hover:bg-primary hover:text-white duration-700 transition-all"
+              >
+                <i class="fa-solid fa-phone"></i> Emergency Help
+              </button>
+            </div>
+          </div>
+          <div
+            class="hero-section-right bg-vector bg-[size:250px] pt-20 bg-no-repeat bg-center"
+          >
+            <img class="" src="/src/images/erasebg-transformed 1.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Trusted section -->
+      <section
+        class="trusted-section flex flex-col-reverse md:flex-row justify-center items-center max-w-285 mx-auto bg-white md:relative my-6 md:my-28 px-4"
+      >
+        <div
+          class="trusted-section-left flex flex-col-reverse md:flex-row md:flex-1"
+        >
+          <div
+            class="trusted-section-left_left flex flex-col items-center md:items-start"
+          >
+            <img
+              src="/src/images/inner-1.png"
+              alt=""
+              class="md:w-81 md:h-107.25 rounded-2xl hover:scale-105 duration-500"
+            />
+            <div
+              class="flex justify-center items-center bg-secondary p-5 md:w-59 md:h-17.75 mt-2 rounded-2xl hover:border-2 hover:border-primary duration-700"
+            >
+              <i
+                class="fa-solid fa-check bg-white rounded-full mr-2 text-center"
+              ></i>
+              <sm class="text-sm text-white">With 15+ years of experience</sm>
+            </div>
+          </div>
+
+          <div
+            class="trust-section-left_right md:absolute md:left-64 flex flex-col items-center"
+          >
+            <div
+              class="trusted-section-left_right_text bg-secondary text-white md:w-46.25 md:h-42.25 w-full py-4 rounded-xl flex flex-col justify-center items-center hover:border-2 hover:border-primary duration-700"
+            >
+              <h1 class="text-5xl font-bold">80%</h1>
+              <small class="text-sm">Successfully Diagnosis</small>
+            </div>
+            <img
+              src="./src/images/inner-2.png"
+              alt=""
+              class="border-8 border-white rounded-xl md:w-68 md:h-82.75 hover:scale-105 duration-500"
+            />
+          </div>
+        </div>
+
+        <div
+          class="trusted-section-right flex flex-col space-y-3.5 px-3.5 items-center md:items-start py-20 flex-1 bg-492141 bg-no-repeat bg-center"
+        >
+          <small class="text-sm">Compassionate Care, Advanced Technology</small>
+          <h1 class="text-3xl md:text-5xl font-bold">
+            Trusted Healthcare for Your Family
+          </h1>
+          <small class="text-sm"
+            >Since 2005, we’ve provided world-class medical services with a
+            patient-first approach. Our board-certified doctors and cutting-edge
+            facilities ensure the best outcomes.</small
+          >
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> 24/7 Emergency
+              Care
+            </li>
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> 50+ Specialist
+              Doctors
+            </li>
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> 98% Patient
+              Satisfaction
+            </li>
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> Free
+              Consultations
+            </li>
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> Advance
+              Technology
+            </li>
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> JCI Accredited
+              Facility
+            </li>
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> Multi fungal
+              Staff
+            </li>
+            <li>
+              <i class="fa-solid fa-check text-secondary"></i> Hoistic Approach
+            </li>
+          </ul>
+          <button
+            class="btn w-fit hover:bg-transparent hover:border border-primary hover:text-primary duration-700"
+          >
+            Meet Our Team <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Welness Section -->
+      <section
+        class="bg-linear-to-r from-[#0B819D45] to-[#155DFC33] w-full relative"
+      >
+        <div class="container max-w-285 mx-auto py-28 px-3 md:px-0">
+          <!-- Welness Heaading -->
+          <p class="text-sm text-center md:text-left">
+            Our Medical Departments
+          </p>
+          <h1 class="text-4xl font-bold md:text-5xl text-center md:text-left">
+            Complete Wellness Solutions <br class="hidden md:block" />
+            For Every Stage of Life
+          </h1>
+          <!-- Card container -->
+          <div class="grid grid-cols-1 gap-[30px] md:grid-cols-3 mt-16">
+            <!-- card-1 -->
+            <div
+              class="flex flex-col bg-white rounded-3xl gap-3 text-center md:text-left p-4 shadow-lg hover:border-primary hover:border-2"
+            >
+              <div
+                class="w-[50px] h-[50px] bg-primary rounded-full flex group justify-center items-center hover:border border-primary hover:bg-transparent"
+              >
+                <i
+                  class="fa-solid fa-brain text-white text-lg group-hover:text-primary group-hover:scale-x-110 duration-700"
+                ></i>
+              </div>
+              <p
+                class="text-xl text-black hover:text-primary hover:font-bold duration-500"
+              >
+                Neurology
+              </p>
+              <small class="text-sm text-gray-500 hover:text-primary"
+                >Advanced stroke, Alzheimer, epilepsy, and nerve disorders with
+                cutting-edge neuroimaging and minimally.</small
+              >
+              <div class="group">
+                <p
+                  class="text-primary cursor-pointer group-hover:text-black group-hover:border group-hover:border-primary w-fit p-3 group-hover:rounded-tr-2xl group-hover:rounded-bl-2xl duration-700 transition-all"
+                >
+                  Read More <i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <!-- card-2 -->
+            <div
+              class="flex flex-col bg-white rounded-3xl gap-3 text-center md:text-left p-4 shadow-lg hover:border-secondary hover:border-2"
+            >
+              <div
+                class="w-[50px] h-[50px] bg-secondary rounded-full flex group justify-center items-center hover:border border-secondary hover:bg-transparent"
+              >
+                <i
+                  class="fa-solid fa-brain text-white text-lg group-hover:text-secondary group-hover:scale-x-110 duration-700"
+                ></i>
+              </div>
+              <p
+                class="text-xl text-black hover:text-secondary hover:font-bold duration-500"
+              >
+                Neurology
+              </p>
+              <small class="text-sm text-gray-500 hover:text-secondary"
+                >Advanced stroke, Alzheimer, epilepsy, and nerve disorders with
+                cutting-edge neuroimaging and minimally.</small
+              >
+              <div class="group">
+                <p
+                  class="text-primary cursor-pointer group-hover:text-black group-hover:border group-hover:border-primary w-fit p-3 group-hover:rounded-tr-2xl group-hover:rounded-bl-2xl duration-700 transition-all"
+                >
+                  Read More <i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- card-3 -->
+            <div
+              class="flex flex-col bg-white rounded-3xl gap-3 text-center md:text-left p-4 shadow-lg hover:border-primary hover:border-2"
+            >
+              <div
+                class="w-[50px] h-[50px] bg-primary rounded-full flex group justify-center items-center hover:border border-primary hover:bg-transparent"
+              >
+                <i
+                  class="fa-solid fa-stethoscope text-white text-lg group-hover:text-primary group-hover:scale-x-110 duration-700"
+                ></i>
+              </div>
+              <p
+                class="text-xl text-black hover:text-primary hover:font-bold duration-500"
+              >
+                Pediatrics
+              </p>
+              <small class="text-sm text-gray-500 hover:text-primary"
+                >Specialized care for children from birth to adolescence,
+                including vaccinations, growth.</small
+              >
+              <div class="group">
+                <p
+                  class="text-primary cursor-pointer group-hover:text-black group-hover:border group-hover:border-primary w-fit p-3 group-hover:rounded-tr-2xl group-hover:rounded-bl-2xl duration-700 transition-all"
+                >
+                  Read More <i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- card-4 -->
+            <div
+              class="flex flex-col bg-white rounded-3xl gap-3 text-center md:text-left p-4 shadow-lg hover:border-primary hover:border-2"
+            >
+              <div
+                class="w-[50px] h-[50px] bg-primary rounded-full flex group justify-center items-center hover:border border-primary hover:bg-transparent"
+              >
+                <i
+                  class="fa-solid fa-briefcase-medical text-white text-lg group-hover:text-primary group-hover:scale-x-110 duration-700"
+                ></i>
+              </div>
+              <p
+                class="text-xl text-black hover:text-primary hover:font-bold duration-500"
+              >
+                Dermatology
+              </p>
+              <small class="text-sm text-gray-500 hover:text-primary"
+                >Medical and cosmetic skin treatments for acne, psoriasis, skin
+                cancer screening, and anti-aging therapies.</small
+              >
+              <div class="group">
+                <p
+                  class="text-primary cursor-pointer group-hover:text-black group-hover:border group-hover:border-primary w-fit p-3 group-hover:rounded-tr-2xl group-hover:rounded-bl-2xl duration-700 transition-all"
+                >
+                  Read More <i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- card-5 -->
+            <div
+              class="flex flex-col bg-white rounded-3xl gap-3 text-center md:text-left p-4 shadow-lg hover:border-primary hover:border-2"
+            >
+              <div
+                class="w-[50px] h-[50px] bg-primary rounded-full flex group justify-center items-center hover:border border-primary hover:bg-transparent"
+              >
+                <i
+                  class="fa-solid fa-user-doctor text-white text-lg group-hover:text-primary group-hover:scale-x-110 duration-700"
+                ></i>
+              </div>
+              <p
+                class="text-xl text-black hover:text-primary hover:font-bold duration-500"
+              >
+                Maternity
+              </p>
+              <small class="text-sm text-gray-500 hover:text-primary"
+                >Complete prenatal classes, delivery suites, and postnatal
+                support for mothers and babies.</small
+              >
+              <div class="group">
+                <p
+                  class="text-primary cursor-pointer group-hover:text-black group-hover:border group-hover:border-primary w-fit p-3 group-hover:rounded-tr-2xl group-hover:rounded-bl-2xl duration-700 transition-all"
+                >
+                  Read More <i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+            <!-- card-6 -->
+            <div
+              class="flex flex-col bg-white rounded-3xl gap-3 text-center md:text-left p-4 shadow-lg hover:border-primary hover:border-2"
+            >
+              <div
+                class="w-[50px] h-[50px] bg-primary rounded-full flex group justify-center items-center hover:border border-primary hover:bg-transparent"
+              >
+                <i
+                  class="fa-solid fa-dna text-white text-lg group-hover:text-primary group-hover:scale-x-110 duration-700"
+                ></i>
+              </div>
+              <p
+                class="text-xl text-black hover:text-primary hover:font-bold duration-500"
+              >
+                Oncology
+              </p>
+              <small class="text-sm text-gray-500 hover:text-primary"
+                >Personalized chemotherapy, radiation therapy, and immunotherapy
+                plans with 24/7 patient support.</small
+              >
+              <div class="group">
+                <p
+                  class="text-primary cursor-pointer group-hover:text-black group-hover:border group-hover:border-primary w-fit p-3 group-hover:rounded-tr-2xl group-hover:rounded-bl-2xl duration-700 transition-all"
+                >
+                  Read More <i class="fa-solid fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./src/images/Group 1410098235.png"
+          alt=""
+          class="absolute right-0 bottom-0 hidden md:block"
+        />
+      </section>
+    </main>
+    <script src="/script.js"></script>
+    <script src="/src/autoTyping.js"></script>
+  </body>
+</html>
